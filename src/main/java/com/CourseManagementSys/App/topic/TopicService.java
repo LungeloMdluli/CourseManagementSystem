@@ -8,6 +8,9 @@ import java.util.List;
 @Service
 public class TopicService {
 
+    /* Since I do not have a database to store the data,
+     this is where I hardcoded the data topics data that I am using.
+     */
     private List<Topic> topics = Arrays.asList(
             new Topic("1", "Strings", "sequence of characters"),
             new Topic("2", "Arrays", "can store multiple values"),
