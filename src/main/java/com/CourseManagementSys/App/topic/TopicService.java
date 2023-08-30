@@ -8,13 +8,23 @@ import java.util.List;
 @Service
 public class TopicService {
 
-    private List<Topics> topics = Arrays.asList(
-            new Topics("1", "Strings", "sequence of characters"),
-            new Topics("2", "Arrays", "can store multiple values"),
-            new Topics("3", "Dictionaries", " a general-purpose data structure for storing a group of objects")
+    private List<Topic> topics = Arrays.asList(
+            new Topic("1", "Strings", "sequence of characters"),
+            new Topic("2", "Arrays", "can store multiple values"),
+            new Topic("3", "Dictionaries", " a general-purpose data structure for storing a group of objects")
     );
 
-    public List<Topics> getTopics(){
+    public List<Topic> getTopics(){
         return topics;
+    }
+
+    public Topic getTopic(String id){
+        for (Topic topic : topics){
+            if (topic.getId().equals(id)){
+                return topic;
+            }
+
+        }
+            return null;
     }
 }
